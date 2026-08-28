@@ -1,0 +1,53 @@
+Azure’s own examples and the Terraform AzureRM provider support patterns such as VM Scale Sets behind Load Balancers, availability zones, private networking, and private endpoints.
+
+🏗️ Architecture 1 — Basic Azure VM
+
+Difficulty: ⭐
+
+                    Internet
+                       |
+                 Public IP
+                       |
+                 +-----------+
+                 |   Azure   |
+                 |    VM     |
+                 |  Ubuntu    |
+                 +-----------+
+                       |
+                    VNet
+                       |
+                 +-----------+
+                 |   NSG     |
+                 +-----------+
+Terraform resources
+
+Practice:
+
+Resource Group
+VNet
+Subnet
+NSG
+Public IP
+NIC
+Linux VM
+SSH key
+Outputs
+Suggested CIDR
+VNet:       10.0.0.0/16
+Subnet:     10.0.1.0/24
+Terraform concepts
+variables.tf
+terraform.tfvars
+main.tf
+outputs.tf
+providers.tf
+
+Practice:
+
+variables
+locals
+outputs
+for_each
+count
+data sources
+resource dependencies

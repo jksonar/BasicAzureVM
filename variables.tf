@@ -37,7 +37,7 @@ variable "admin_username" {
 variable "vm_size" {
   description = "VM SKU size."
   type        = string
-  default     = "Standard_B1s"
+  default     = "Standard_D2als_v7"
 }
 
 variable "vm_count" {
